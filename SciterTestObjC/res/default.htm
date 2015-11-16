@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            * { font-family: verdana, serif; font-size:12pt; color:#7d7d7d; font-weight: 550; }
+            h2 { font-size:14pt; color:#4d4d4d; }
+            label { width:180px; text-align:left; padding-left:50px; padding-top:7px;}
+            input { width:180px; }
+            input, label { float:left; margin-top:5px; margin-bottom:5px; }
+            
+            label.remember_me { float: left; padding-left:-30px; padding-top:0px; font-size:10pt; width:auto; }
+            input#remember_me { float: left; margin-left:180px; width:80px; }
+            div { clear:both; padding-bottom:5px; display:block; width:100%; }
+            div.buttons { width: 75%; margin: 0 auto; }
+            img#close_button { float:right; margin-top:0px; margin-right:10px; cursor:pointer; }
+        </style>
+        <script type="text/tiscript">
+            
+            var error = function(meeting_id) {
+                setEnabled(true);
+                view.msgbox(#error, "error while connecting to " + meeting_id);
+            }
+            var network_error = function(meeting_id) {
+                setEnabled(true);
+                view.msgbox(#error, "Network error while connecting to " + meeting_id);
+            }
+            var success = function(meeting_id) {
+                setEnabled(true);
+                view.msgbox(#information, "Successfully connected to " + meeting_id);
+            }
+
+
+            $(img#close_button).onClick = function() {
+                view.close();
+            }
+            
+            function setEnabled(enabled) {
+                $(button#cancel).disabled = !enabled;
+                $(button#join).disabled = !enabled;
+            }
+        
+            function validateEmail(email) {
+                var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+                return re.test(email);
+            }
+        
+            function checkFields(name, email, meeting_id) {
+                return (name.length > 0) && (meeting_id.length > 0) && validateEmail(email);
+            }
+            
+            
+            $(button#cancel).onClick = function() {
+                $(input#name).text = "";
+                $(input#email).text = "";
+                $(input#meeting_id).text = "";
+            }
+        
+            $(button#join).onClick = function() {
+                setEnabled(false);
+                
+                var name = $(input#name).text.trim();
+                var email = $(input#email).text.trim();
+                var m_id = $(input#meeting_id).text.trim();
+                
+                if (!checkFields(name, email, m_id)) {
+                    if (name.length < 1) view.msgbox(#error, "Name field shouldn't be empty");
+                    if (m_id.length < 1) view.msgbox(#error, "Please provide meeting id");
+                    if (!validateEmail(email)) view.msgbox(#error, "Email should be valid");
+                    return;
+                }
+                
+                stdout.println("Meeting id: " + m_id);
+                
+                view.join_meeting(m_id.urlEscape());
+            }
+        
+        function movable() // install movable window handler
+        {
+            var xoff,yoff;
+            var dragging = false;
+            var body = $(body);
+            
+            function doDrag()
+            {
+                while( dragging )
+                view.doEvent();
+            }
+            
+            function onMouseDown(evt)
+            {
+                if( evt.target !== body )
+                return false;
+                xoff = evt.x;
+                yoff = evt.y;
+                dragging = true;
+                view.root.capture(true);
+                doDrag();
+                return true;
+            }
+            
+            function onMouseMove(evt)
+            {
+                if( dragging )
+                {
+                    view.move( evt.xScreen - xoff, evt.yScreen - yoff, true); // true - x,y are coordinates of the client area on the screen
+                    return true;
+                }
+                //else
+                //  stderr.println("mouse move", evt.x , evt.y);
+                return false;
+            }
+            
+            function stopDrag()
+            {
+                if(dragging)
+                {
+                    dragging = false;
+                    view.root.capture(false);
+                    return true;
+                }
+                return false;
+            }
+            
+            function onMouseUp(evt) { return stopDrag(); }
+            function onKeyDown(evt) { if(evt.keyCode == Event.VK_ESCAPE ) return stopDrag(); }
+            
+            // hookup event handlers:
+            view.root.subscribe(onMouseDown, Event.MOUSE, Event.MOUSE_DOWN );
+            view.root.subscribe(onMouseUp, Event.MOUSE, Event.MOUSE_UP );
+            view.root.subscribe(onMouseMove, Event.MOUSE, Event.MOUSE_MOVE );
+            view.root.subscribe(onKeyDown, Event.KEY, Event.KEY_DOWN );
+            return false;
+        }
+        
+        movable();
+
+        
+        </script>
+    </head>
+    <body>
+        <img #close_button src="close_button.png">
+        <header>
+            <h2>Join meeting</h2>
+            <hr>
+            Provide your name, email address and online meeting ID to join instantly.
+        </header>
+        <div>
+            <div>
+                <label for="name">Name:</label><input #name>
+                <label for="email">Email:</label><input #email>
+                <div><label for="meeting_id">Online meeting ID:</label><input #meeting_id></div>
+                <div><input type="checkbox" #remember_me><label for="remember_me" .remember_me>Remember me on this computer</label></div>
+            </div>
+                <div .buttons>
+                    <button #cancel>Cancel</button>
+                    <button #join>Join</button>
+                </div>
+        </div>
+        <footer>
+            <hr>
+            Questions? 844-844-1322 or <a href="mailto:support@freeconferencecall.com">support@freeconferencecall.com</a>
+        </footer>
+    </body>
+</html>

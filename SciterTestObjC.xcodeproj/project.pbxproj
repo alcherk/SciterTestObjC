@@ -8,19 +8,65 @@
 
 /* Begin PBXBuildFile section */
 		D7E80A141BFA605C00157A38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E80A131BFA605C00157A38 /* AppDelegate.m */; };
-		D7E80A171BFA605C00157A38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E80A161BFA605C00157A38 /* main.m */; };
+		D7E80A171BFA605C00157A38 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = D7E80A161BFA605C00157A38 /* main.mm */; };
 		D7E80A191BFA605C00157A38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7E80A181BFA605C00157A38 /* Assets.xcassets */; };
 		D7E80A1C1BFA605D00157A38 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7E80A1A1BFA605D00157A38 /* MainMenu.xib */; };
+		D7E80A251BFA607B00157A38 /* MainWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = D7E80A241BFA607B00157A38 /* MainWindow.mm */; };
+		D7E80A3E1BFA61C800157A38 /* sciter-osx-64.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E80A3D1BFA61C800157A38 /* sciter-osx-64.dylib */; };
+		D7E80A431BFA61D700157A38 /* close_button.png in Resources */ = {isa = PBXBuildFile; fileRef = D7E80A401BFA61D700157A38 /* close_button.png */; };
+		D7E80A441BFA61D700157A38 /* default.htm in Resources */ = {isa = PBXBuildFile; fileRef = D7E80A411BFA61D700157A38 /* default.htm */; };
+		D7E80A471BFA61E000157A38 /* compile-res.sh in Resources */ = {isa = PBXBuildFile; fileRef = D7E80A461BFA61E000157A38 /* compile-res.sh */; };
+		D7E80A491BFA652F00157A38 /* sciter-osx-64.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = D7E80A3D1BFA61C800157A38 /* sciter-osx-64.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D7E80A4E1BFA67BD00157A38 /* packfolder in Resources */ = {isa = PBXBuildFile; fileRef = D7E80A4D1BFA67BD00157A38 /* packfolder */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D7E80A481BFA652500157A38 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D7E80A491BFA652F00157A38 /* sciter-osx-64.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D7E80A0F1BFA605C00157A38 /* SciterTestObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SciterTestObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E80A121BFA605C00157A38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D7E80A131BFA605C00157A38 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D7E80A161BFA605C00157A38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D7E80A161BFA605C00157A38 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		D7E80A181BFA605C00157A38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7E80A1B1BFA605D00157A38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		D7E80A1D1BFA605D00157A38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7E80A231BFA607B00157A38 /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
+		D7E80A241BFA607B00157A38 /* MainWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainWindow.mm; sourceTree = "<group>"; };
+		D7E80A271BFA611000157A38 /* aux-cvt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "aux-cvt.h"; sourceTree = "<group>"; };
+		D7E80A281BFA611000157A38 /* aux-platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "aux-platform.h"; sourceTree = "<group>"; };
+		D7E80A291BFA611000157A38 /* aux-slice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "aux-slice.h"; sourceTree = "<group>"; };
+		D7E80A2A1BFA611000157A38 /* sciter-x-api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sciter-x-api.h"; sourceTree = "<group>"; };
+		D7E80A2B1BFA611000157A38 /* sciter-x-behavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sciter-x-behavior.h"; sourceTree = "<group>"; };
+		D7E80A2C1BFA611000157A38 /* sciter-x-debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sciter-x-debug.h"; sourceTree = "<group>"; };
+		D7E80A2D1BFA611000157A38 /* sciter-x-def.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sciter-x-def.h"; sourceTree = "<group>"; };
+		D7E80A2E1BFA611000157A38 /* sciter-x-dom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sciter-x-dom.h"; sourceTree = "<group>"; };
+		D7E80A2F1BFA611000157A38 /* sciter-x-dom.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "sciter-x-dom.hpp"; sourceTree = "<group>"; };
+		D7E80A301BFA611000157A38 /* sciter-x-host-callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sciter-x-host-callback.h"; sourceTree = "<group>"; };
+		D7E80A311BFA611000157A38 /* sciter-x-types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sciter-x-types.h"; sourceTree = "<group>"; };
+		D7E80A321BFA611000157A38 /* sciter-x-value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sciter-x-value.h"; sourceTree = "<group>"; };
+		D7E80A331BFA611000157A38 /* sciter-x.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sciter-x.h"; sourceTree = "<group>"; };
+		D7E80A341BFA611000157A38 /* tiscript-streams.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "tiscript-streams.hpp"; sourceTree = "<group>"; };
+		D7E80A351BFA611000157A38 /* tiscript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiscript.h; sourceTree = "<group>"; };
+		D7E80A361BFA611000157A38 /* tiscript.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tiscript.hpp; sourceTree = "<group>"; };
+		D7E80A371BFA611000157A38 /* value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = value.h; sourceTree = "<group>"; };
+		D7E80A381BFA611000157A38 /* value.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = value.hpp; sourceTree = "<group>"; };
+		D7E80A391BFA619700157A38 /* aux-asset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "aux-asset.h"; sourceTree = "<group>"; };
+		D7E80A3D1BFA61C800157A38 /* sciter-osx-64.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "sciter-osx-64.dylib"; sourceTree = "<group>"; };
+		D7E80A401BFA61D700157A38 /* close_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_button.png; sourceTree = "<group>"; };
+		D7E80A411BFA61D700157A38 /* default.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = default.htm; sourceTree = "<group>"; };
+		D7E80A461BFA61E000157A38 /* compile-res.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "compile-res.sh"; sourceTree = "<group>"; };
+		D7E80A4D1BFA67BD00157A38 /* packfolder */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = packfolder; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E80A3E1BFA61C800157A38 /* sciter-osx-64.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,11 +100,11 @@
 		D7E80A111BFA605C00157A38 /* SciterTestObjC */ = {
 			isa = PBXGroup;
 			children = (
-				D7E80A121BFA605C00157A38 /* AppDelegate.h */,
-				D7E80A131BFA605C00157A38 /* AppDelegate.m */,
-				D7E80A181BFA605C00157A38 /* Assets.xcassets */,
-				D7E80A1A1BFA605D00157A38 /* MainMenu.xib */,
-				D7E80A1D1BFA605D00157A38 /* Info.plist */,
+				D7E80A3F1BFA61D700157A38 /* res */,
+				D7E80A3A1BFA619F00157A38 /* Frameworks */,
+				D7E80A261BFA611000157A38 /* include */,
+				D7E80A231BFA607B00157A38 /* MainWindow.h */,
+				D7E80A241BFA607B00157A38 /* MainWindow.mm */,
 				D7E80A151BFA605C00157A38 /* Supporting Files */,
 			);
 			path = SciterTestObjC;
@@ -66,9 +113,59 @@
 		D7E80A151BFA605C00157A38 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D7E80A161BFA605C00157A38 /* main.m */,
+				D7E80A461BFA61E000157A38 /* compile-res.sh */,
+				D7E80A4D1BFA67BD00157A38 /* packfolder */,
+				D7E80A181BFA605C00157A38 /* Assets.xcassets */,
+				D7E80A1A1BFA605D00157A38 /* MainMenu.xib */,
+				D7E80A1D1BFA605D00157A38 /* Info.plist */,
+				D7E80A121BFA605C00157A38 /* AppDelegate.h */,
+				D7E80A131BFA605C00157A38 /* AppDelegate.m */,
+				D7E80A161BFA605C00157A38 /* main.mm */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7E80A261BFA611000157A38 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D7E80A391BFA619700157A38 /* aux-asset.h */,
+				D7E80A271BFA611000157A38 /* aux-cvt.h */,
+				D7E80A281BFA611000157A38 /* aux-platform.h */,
+				D7E80A291BFA611000157A38 /* aux-slice.h */,
+				D7E80A2A1BFA611000157A38 /* sciter-x-api.h */,
+				D7E80A2B1BFA611000157A38 /* sciter-x-behavior.h */,
+				D7E80A2C1BFA611000157A38 /* sciter-x-debug.h */,
+				D7E80A2D1BFA611000157A38 /* sciter-x-def.h */,
+				D7E80A2E1BFA611000157A38 /* sciter-x-dom.h */,
+				D7E80A2F1BFA611000157A38 /* sciter-x-dom.hpp */,
+				D7E80A301BFA611000157A38 /* sciter-x-host-callback.h */,
+				D7E80A311BFA611000157A38 /* sciter-x-types.h */,
+				D7E80A321BFA611000157A38 /* sciter-x-value.h */,
+				D7E80A331BFA611000157A38 /* sciter-x.h */,
+				D7E80A341BFA611000157A38 /* tiscript-streams.hpp */,
+				D7E80A351BFA611000157A38 /* tiscript.h */,
+				D7E80A361BFA611000157A38 /* tiscript.hpp */,
+				D7E80A371BFA611000157A38 /* value.h */,
+				D7E80A381BFA611000157A38 /* value.hpp */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		D7E80A3A1BFA619F00157A38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7E80A3D1BFA61C800157A38 /* sciter-osx-64.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7E80A3F1BFA61D700157A38 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				D7E80A401BFA61D700157A38 /* close_button.png */,
+				D7E80A411BFA61D700157A38 /* default.htm */,
+			);
+			path = res;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -81,6 +178,8 @@
 				D7E80A0B1BFA605C00157A38 /* Sources */,
 				D7E80A0C1BFA605C00157A38 /* Frameworks */,
 				D7E80A0D1BFA605C00157A38 /* Resources */,
+				D7E80A481BFA652500157A38 /* CopyFiles */,
+				D7E80A4A1BFA653500157A38 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -128,20 +227,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E80A4E1BFA67BD00157A38 /* packfolder in Resources */,
+				D7E80A431BFA61D700157A38 /* close_button.png in Resources */,
 				D7E80A191BFA605C00157A38 /* Assets.xcassets in Resources */,
+				D7E80A471BFA61E000157A38 /* compile-res.sh in Resources */,
+				D7E80A441BFA61D700157A38 /* default.htm in Resources */,
 				D7E80A1C1BFA605D00157A38 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D7E80A4A1BFA653500157A38 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$PROJECT_NAME\"\n./compile-res.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D7E80A0B1BFA605C00157A38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7E80A171BFA605C00157A38 /* main.m in Sources */,
+				D7E80A171BFA605C00157A38 /* main.mm in Sources */,
 				D7E80A141BFA605C00157A38 /* AppDelegate.m in Sources */,
+				D7E80A251BFA607B00157A38 /* MainWindow.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +365,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SciterTestObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SciterTestObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alcherk.SciterTestObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -257,6 +381,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SciterTestObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SciterTestObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alcherk.SciterTestObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
